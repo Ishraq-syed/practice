@@ -1,5 +1,5 @@
-import { RouterOutlet } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +12,19 @@ export class AppComponent implements OnInit {
   title = 'my-app';
 
   ngOnInit(): void {
-    const result = this.doSubtract(10, 5);
-    console.log('Subtraction result:', result);
+    this.doSum();
   }
 
-  doSubtract(a: number, b: number): number {
-    return a - b;
+  doSum(): void {
+    const a = 5;
+    const b = 10;
+    const sum = a * b;
+    console.log(`The sum of ${a} and ${b} is ${sum}`);
+  }
+  doMultiply() {
+    const a = 5;
+    const b = 10;
+    const product = a * b;
+    console.log(`The product of ${a} and ${b} is ${product}`);
   }
 }
