@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   doSum(): void {
     const a = 5;
     const b = 10;
-    const sum = a + b;
+    const sum = a * b;
     console.log(`The sum of ${a} and ${b} is ${sum}`);
   }
 }
