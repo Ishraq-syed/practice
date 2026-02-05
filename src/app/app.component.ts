@@ -21,4 +21,10 @@ export class AppComponent implements OnInit {
     const sum = a * b;
     console.log(`The sum of ${a} and ${b} is ${sum}`);
   }
+  doMultiply() {
+    const a = 5;
+    const b = 10;
+    const product = a * b;
+    console.log(`The product of ${a} and ${b} is ${product}`);
+  }
 }
