@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -6,8 +6,25 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'my-app';
+
+  ngOnInit(): void {
+    this.doSum();
+  }
+
+  doSum(): void {
+    const a = 5;
+    const b = 10;
+    const sum = a * b;
+    console.log(`The sum of ${a} and ${b} is ${sum}`);
+  }
+  doMultiply() {
+    const a = 5;
+    const b = 10;
+    const product = a * b;
+    console.log(`The product of ${a} and ${b} is ${product}`);
+  }
 }
